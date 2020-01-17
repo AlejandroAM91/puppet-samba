@@ -1,9 +1,62 @@
 {
-    "name": "alejandroam91-samba",
-    "version": "0.0.0",
-    "author": "Alejandro Alonso Mayo",
-    "license": "MIT",
-    "summary": "Installs, configures, and manages the samba service.",
-    "source": "https://github.com/AlejandroAM91/puppet-samba",
-    "dependencies": []
+  "name": "alejandroam91-samba",
+  "version": "0.0.0",
+  "author": "Alejandro Alonso Mayo",
+  "summary": "Installs, configures, and manages the samba service.",
+  "license": "MIT",
+  "source": "https://github.com/AlejandroAM91/puppet-samba",
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "18.04"
+      ]
+    },
+    {
+      "operatingsystem": "windows",
+      "operatingsystemrelease": [
+        "2019",
+        "10"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.10.0 < 7.0.0"
+    }
+  ]
 }
