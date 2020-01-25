@@ -1,3 +1,5 @@
 class samba {
-  contain samba::install
+    contain samba::config
+    contain samba::install
+    contain samba::service
 }
