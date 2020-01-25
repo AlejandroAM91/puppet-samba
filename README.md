@@ -1,2 +1,3 @@
-# puppet-samba
-Puppet module for samba
+# Samba Server
+Puppet module to installs, configure, and manage samba server.
+

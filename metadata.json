@@ -1,0 +1,25 @@
+{
+  "name": "alejandroam91-samba_server",
+  "version": "0.0.0",
+  "author": "Alejandro Alonso Mayo",
+  "summary": "Installs, configures, and manages the samba service.",
+  "license": "MIT",
+  "source": "https://github.com/AlejandroAM91/puppet-samba-server",
+  "project_page": "https://github.com/AlejandroAM91/puppet-samba-server",
+  "issues_url": "https://github.com/AlejandroAM91/puppet-samba-server/issues",
+  "dependencies": [],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "9"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.10.0 < 7.0.0"
+    }
+  ]
+}
