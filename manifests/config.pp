@@ -1,7 +1,7 @@
 class samba::config {
     file { '/etc/samba/smb.conf':
-        ensure => present,
         require => Class['samba::install'],
+        ensure => present,
         content => epp('samba/smb.conf.epp')
     }
 }
