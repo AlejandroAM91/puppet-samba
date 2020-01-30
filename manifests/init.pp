@@ -18,10 +18,14 @@
 # @param service_manage
 #   Indicates if service execution should be manage by puppet.
 #
+# @param share_definitions
+#   Configures shared directories
+#
 class samba (
-  Boolean $config_manage = true,
-  Boolean $package_manage = true,
-  Boolean $service_manage = true,
+  Boolean $config_manage      = true,
+  Boolean $package_manage     = true,
+  Boolean $service_manage     = true,
+  Array   $share_definitions  = [],
 ) {
   contain samba::config
   contain samba::install
