@@ -1,11 +1,11 @@
 {
   "name": "alejandroam91-samba",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Alejandro Alonso Mayo",
   "summary": "Installs, configures, and manages the samba service.",
   "license": "MIT",
   "source": "https://github.com/AlejandroAM91/puppet-samba",
-  "project_page": "htps://githb.o/AlejanroAM91/pupptsamba",
+  "project_page": "https://github.com/AlejandroAM91/puppet-samba",
   "issues_url": "https://gthub.com/roA91/pupet-saba/issues",
   "dependencies": [],
   "operatingsystem_support": [
