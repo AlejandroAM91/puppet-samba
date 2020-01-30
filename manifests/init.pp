@@ -9,6 +9,15 @@
 # @example
 #   class { 'samba': }
 #
+# @param config_manage
+#   Indicates if config files should be manage by puppet.
+#
+# @param package_manage
+#   Indicates if package instalation should be manage by puppet.
+#
+# @param service_manage
+#   Indicates if service execution should be manage by puppet.
+#
 class samba (
   Boolean $config_manage = true,
   Boolean $package_manage = true,
