@@ -11,7 +11,8 @@ class samba::config {
 
     file { '/etc/samba/smb.conf':
       require => Class['samba::install'],
-      ensure => present,
+      notify  => Class['samba::service'],
+      ensure  => present,
       content => epp('samba/smb.conf.epp', {
         share_definitions => $share_definitions
       })
