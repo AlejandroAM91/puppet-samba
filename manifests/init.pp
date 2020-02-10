@@ -30,7 +30,7 @@ class samba_server (
   class {'samba_server::config':
     config_manage => $config_manage
   }
-  
+
   class {'samba_server::install':
     package_manage => $package_manage
   }
