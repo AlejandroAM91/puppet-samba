@@ -22,12 +22,20 @@
 #   Configures shared directories
 #
 class samba_server (
-  Boolean $config_manage      = true,
-  Boolean $package_manage     = true,
-  Boolean $service_manage     = true,
-  Array   $share_definitions  = [],
+  Boolean $config_manage     = true,
+  Boolean $package_manage    = true,
+  Boolean $service_manage    = true,
+  # Array   $share_definitions  = [],
 ) {
-  contain samba_server::config
-  contain samba_server::install
-  contain samba_server::service
+  class {'samba_server::config':
+    config_manage => $config_manage
+  }
+
+  class {'samba_server::install':
+    package_manage => $package_manage
+  }
+
+  class {'samba_server::service':
+    service_manage => $service_manage
+  }
 }

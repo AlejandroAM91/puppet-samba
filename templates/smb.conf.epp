@@ -1,8 +1,8 @@
 <%- | Array $share_definitions | -%>
 [global]
   map to guest = bad user
-
 <% $share_definitions.each |$index, $value| { -%>
+
 [<%= $value[name] %>]
   path = <%= $value[path] %>
   public = yes
@@ -10,5 +10,4 @@
   comment = smb share
   printable = no
   guest ok = yes
-
 <% } -%>
