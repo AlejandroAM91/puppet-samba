@@ -53,6 +53,32 @@ describe 'samba_server' do
         it { is_expected.to compile }
         it { is_expected.to contain_class('samba_server::service').with('service_manage' => false) }
       end
+
+      context 'with $share_definitions list' do
+        let(:params) do
+          {
+            'share_definitions' => [
+              {
+                'name' => 'test',
+                'path' => '/dir/test',
+              },
+            ],
+          }
+        end
+
+        it { is_expected.to compile }
+        it {
+          is_expected.to contain_class('samba_server::config')
+            .with(
+              'share_definitions' => [
+                {
+                  'name' => 'test',
+                  'path' => '/dir/test',
+                },
+              ],
+            )
+        }
+      end
     end
   end
 end

@@ -25,17 +25,18 @@ class samba_server (
   Boolean $config_manage     = true,
   Boolean $package_manage    = true,
   Boolean $service_manage    = true,
-  # Array   $share_definitions  = [],
+  Array   $share_definitions = [],
 ) {
   class {'samba_server::config':
-    config_manage => $config_manage
+    config_manage     => $config_manage,
+    share_definitions => $share_definitions,
   }
 
   class {'samba_server::install':
-    package_manage => $package_manage
+    package_manage => $package_manage,
   }
 
   class {'samba_server::service':
-    service_manage => $service_manage
+    service_manage => $service_manage,
   }
 }
